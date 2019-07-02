@@ -1,13 +1,31 @@
-<h1>Spaces</h1>
-<form action="/list-space" method="get">
-  <input type="submit" value="list a space">
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Spaces - MakersBnB</title>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
 
-<% if @space %>
-<div>
-  <h2>Check out these spaces:</h2>
-  <ul>
-    <li><%= @space %></li>
-  </ul>
-</div>
-<% end %>
+      $(document).ready(function() {
+
+        $("#spaces").text('Spaces');
+
+      });
+
+    </script>
+
+    <h1><span id="spaces"></span></h1>
+    <form action="/list-space" method="get">
+      <input type="submit" value="list a space">
+    </form>
+
+    <% if @space %>
+    <div>
+      <ul>
+        <li><%= @space %></li>
+      </ul>
+    </div>
+    <% end %>
+  </body>
+</html>
