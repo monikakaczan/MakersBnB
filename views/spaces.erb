@@ -2,3 +2,12 @@
 <form action="/list-space" method="get">
   <input type="submit" value="list a space">
 </form>
+
+<% if @space %>
+<div>
+  <h2>Check out these spaces:</h2>
+  <ul>
+    <li><%= @space %></li>
+  </ul>
+</div>
+<% end %>
