@@ -11,5 +11,9 @@ class MakersBnB < Sinatra::Base
     erb :spaces
   end
 
+  get '/list-space' do
+    erb :list_space
+  end
+
   run! if app_file == $0
 end
