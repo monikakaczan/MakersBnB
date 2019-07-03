@@ -4,21 +4,28 @@
     <title>Spaces - MakersBnB</title>
   </head>
   <body>
+
+    <h1>Spaces</h1>
+    <div id="list-new-space">
+      <button type="button" id="list-a-space">list a space</button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
 
       $(document).ready(function() {
 
-        $("#spaces").text('Spaces');
+        $("#list-a-space").click(function () {
+          $("#list-new-space").load('new_list_form', function(responseTxt, statusTxt, xhr) {
+            console.log(responseTxt);
+            console.log(statusTxt);
+            console.log(xhr);
+          });
+        });
 
       });
 
     </script>
-
-    <h1><span id="spaces"></span></h1>
-    <form action="/list-space" method="get">
-      <input type="submit" value="list a space">
-    </form>
 
     <% if @space %>
     <div>
