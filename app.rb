@@ -16,9 +16,9 @@ class MakersBnB < Sinatra::Base
     erb :list_space
   end
 
-  get '/new_list_form' do
-    erb :new_list_form
-  end
+  # get '/new_list_form' do
+  #   erb :new_list_form
+  # end
 
   post '/spaces' do
     session[:name] = params[:name]

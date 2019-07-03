@@ -11,15 +11,27 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- <script src="new_list_form.html"></script> -->
+
+    <!-- <script src="list_space.erb"></script> -->
+    <!-- <script src="new_list_form.html"></script> -->
+
+
     <script>
 
       $(document).ready(function() {
 
         $("#list-a-space").click(function () {
+          /*
           $("#list-new-space").load('new_list_form', function(responseTxt, statusTxt, xhr) {
             console.log(responseTxt);
             console.log(statusTxt);
             console.log(xhr);
+          });
+          */
+          $.get("new_list_form.html", function(data){
+            $("#list-new-space").html(data);
+            console.log(data);
           });
         });
 
