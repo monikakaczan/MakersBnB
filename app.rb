@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/space'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -8,7 +9,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces' do
-    # @spaces= Space.all
+    @spaces = Space.all
     # @spaces << session[:name]
     erb :spaces
   end
@@ -18,7 +19,8 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces' do
-    session[:name] = params[:name]
+    Space.create(name:params[:name])
+    # session[:name] = params[:name]
     redirect '/spaces'
   end
 

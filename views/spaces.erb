@@ -32,10 +32,12 @@
 
     </script>
 
-    <% if @space %>
+    <% if @spaces %>
     <div>
       <ul>
-        <li><%= @space %></li>
+        <% @spaces.each do |space| %>
+        <li><%= space %></li>
+        <% end %>
       </ul>
     </div>
     <% end %>
