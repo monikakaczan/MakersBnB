@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
     <title>Spaces - MakersBnB</title>
   </head>
   <body>
 
     <h1>Spaces</h1>
+
+    <div id="list-new-space">
+      <button type="button" id="list-a-space">list a space</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- <script src="new_list_form.html"></script> -->
+
+    <!-- <script src="list_space.erb"></script> -->
+    <!-- <script src="new_list_form.html"></script> -->
+
 
     <script>
 
@@ -23,18 +32,6 @@
       });
 
     </script>
-
-
-    <div id="list-new-space">
-      <button type="button" id="list-a-space">list a space</button>
-    </div>
-
-    <!-- <script src="new_list_form.html"></script> -->
-
-    <!-- <script src="list_space.erb"></script> -->
-    <!-- <script src="new_list_form.html"></script> -->
-
-
 
     <% if @spaces %>
     <div>

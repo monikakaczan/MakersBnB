@@ -20,7 +20,9 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(name:params[:name])
+
+    ADD GET METHOD HERE 
+    # Space.create(name:params[:name])
     # session[:name] = params[:name]
     redirect '/spaces'
   end
