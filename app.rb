@@ -1,5 +1,6 @@
 require 'sinatra/base'
-require_relative './lib/space'
+# require_relative './lib/space'
+require "./database_connection_setup"
 
 class MakersBnB < Sinatra::Base
   enable :sessions

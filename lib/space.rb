@@ -1,22 +1,15 @@
+# require './database_connection_setup.rb'
+# require 'data_mapper'
+
 class Space
 
-attr_reader :name
-
-@spaces = []
-
-  def initialize (name:)
-    @name=name
-  end
-
-  def self.all
-    @spaces
-  end
-
-  def self.create(name:)
-    space = Space.new(name: name)
-    @spaces.push(space.name)
-    return space.name
-
-  end
-
+include DataMapper::Resource
+  property :id,   Serial
+  property :name, String
+  property :description, String
+  property :price, Integer
 end
+#
+# DataMapper.finalize
+# DataMapper.auto_upgrade!
+# #

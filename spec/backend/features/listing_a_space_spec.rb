@@ -1,5 +1,5 @@
 feature 'listing a space' do
-  xscenario 'user can list a space' do
+   scenario 'user can list a space' do
     visit('/spaces')
     click_button('list a space')
     fill_in('name', with: 'My test space')
